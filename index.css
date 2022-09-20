@@ -1,0 +1,157 @@
+:root {
+    --primary: #00baf2;
+    --secondary: #95989a;
+    --text-color: #fff;
+    --text-secondary: #000;
+    --text-tertiary: #5d5d5d;
+  }
+  
+  * {
+    font-family: "Roboto";
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    background: radial-gradient( #353535, #000);    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center ;
+  }
+  
+  /* Event form */
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--text-color);
+
+    width: 100%;
+    margin-top: 6em;
+
+
+  }
+  
+  .aviso h2,
+  .aviso .event-date {
+    color: var(--primary);
+  }
+  
+  .aviso h2 {
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+  
+  .aviso .sobre {
+    font-size: 2em;
+    text-transform: uppercase;
+    max-width: 350px;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  
+  .aviso p {
+    font-size: 1.2em;
+    margin-bottom: 0.3em;
+  }
+  
+  .aviso .event-date {
+    font-weight: bold;
+  }
+  
+  #form {
+    background-color: var(--secondary);
+    padding: 3em;
+    border-radius: 20px;
+    max-width: 30%;
+  }
+  
+  #form p {
+    font-size: 1.5em;
+    color: var(--text-secondary);
+    margin-bottom: 1em;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8em;
+  }
+  
+  .form-group label {
+    color: var(--text-tertiary);
+    margin-bottom: 0.3em;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 6px 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  .btn {
+    background-color: var(--primary);
+    color: var(--text-color);
+    text-transform: uppercase;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
+  
+ 
+  
+  /* Mobile */
+  @media (max-width: 900px){
+    header{
+      flex-direction: column;
+    }
+
+    .aviso h2, .aviso .event-date, .sobre {
+    text-align: center;
+    }
+    
+    .aviso h2{
+      margin-top: -1.5em;
+    }
+
+    #form{
+      max-width: 80%;
+      margin: 2em 0;
+    }
+  }
+
+
+
+  @media (max-width: 450px) {
+    /* Event form */
+    #event-subscription {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .aviso {
+      padding: 2em;
+    }
+  
+    .aviso h2 {
+      margin-bottom: 0.5em;
+    }
+  
+    #subscription-form {
+      max-width: 70%;
+      margin-bottom: 2em;
+    }
+  
+   
+  }
