@@ -20,6 +20,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
     />
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div id="countdown" class="countdown">
@@ -48,7 +51,7 @@
 
     <header>
       <div class="aviso">
-        <h2>Sua Landing Page</h2>
+        <h2 onclick="registerUser()" id="btn">Sua Landing Page</h2>
         <p class="sobre">
             Lorem Ipsum is simply dummy text of the 
         </p>
@@ -61,42 +64,45 @@
       
         <form >
           <div class="form-group">
-            <label name="name">Nome</label>
-            <input type="text"  />
+            <label >Nome</label>
+            <input type="text"  id="name"/>
           </div>
           <div class="form-group">
-            <label id="email">E-mail</label>
-            <input type="email"  />
+            <label >E-mail</label>
+            <input type="email"  id="email"/>
           </div>
           <div class="form-group">
-            <label id="phone">Telefone</label>
-            <input type="text"  />
+            <label >Telefone</label>
+            <input type="text" id="phone" />
           </div>
          
-          <button onclick="registerUser()" id="btn" class="btn" > ENVIAR</button>
+          <button   class="btn" > ENVIAR</button>
         </form>
       </div>
     </header>
   </body>
 
   <script src="app.js"></script>
-  <script>
-    function postDatas(body){
-
+  <script >  
+  async function postData(body){
     alert(body)
-    }
+}
 
-      function registerUser(){
-      preventDefault()
-      const name = document.getElementById("name").value
-      const email = document.getElementById("email").value
-      const phone = document.getElementById("phone").value
+   function registerUser(){
+    const name = document.getElementById("name").value
+    const email = document.getElementById("email").value
+    const phone = document.getElementById("phone").value
 
-     alert(name)
+   const body = {
+    name,
+    email,
+    phone
+   }
 
+    const data = axios.get("http://localhost:3333/users").then( res => console.log(res)).catch(err=> console.log(err)) ;
+    console.log(data)
+    alert("clique")
 
-      }
-
-  </script>
+  }</script>
 
 </html>
