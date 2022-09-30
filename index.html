@@ -51,7 +51,7 @@
 
     <header>
       <div class="aviso">
-        <h2 onclick="registerUser()" id="btn">Sua Landing Page</h2>
+        <h2  id="btn">Sua Landing Page</h2>
         <p class="sobre">
             Lorem Ipsum is simply dummy text of the 
         </p>
@@ -76,7 +76,7 @@
             <input type="text" id="phone" />
           </div>
          
-          <button   class="btn" > ENVIAR</button>
+          <button  onclick="registerUser()" class="btn" > ENVIAR</button>
         </form>
       </div>
     </header>
@@ -88,7 +88,7 @@
     alert(body)
 }
 
-   function registerUser(){
+   async function registerUser(){
     const name = document.getElementById("name").value
     const email = document.getElementById("email").value
     const phone = document.getElementById("phone").value
@@ -99,10 +99,8 @@
     phone
    }
 
-    const data = axios.get("http://localhost:3333/users").then( res => console.log(res)).catch(err=> console.log(err)) ;
-    console.log(data)
-    alert("clique")
-
+   const resp = await axios.post("http://localhost:3333/users", body)
+   console.log(resp.data)
   }</script>
 
 </html>
