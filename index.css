@@ -93,6 +93,10 @@
     border: none;
     outline: none;
   }
+
+  input::placeholder{
+    opacity: .4;
+  }
   
   .btn {
     background-color: var(--primary);
