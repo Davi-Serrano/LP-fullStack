@@ -21,6 +21,7 @@ function updateCountdown() {
 	hours.innerHTML = h < 10 ? '0' + h : h;
 	minutes.innerHTML = m < 10 ? '0' + m : m;
 	seconds.innerHTML = s < 10 ? '0' + s : s;
+	setInterval(updateCountdown, 1000)
 }
 
-setInterval(updateCountdown, 1000);
+updateCountdown();

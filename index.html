@@ -28,22 +28,22 @@
     <div id="countdown" class="countdown">
 
       <div class="time">
-       <h2 id="days"></h2>
+       <h2 id="days">0</h2>
        <small>Dias</small>
       </div>
     
       <div class="time">
-       <h2 id="hours"></h2>
+       <h2 id="hours">00</h2>
        <small>Horas</small>
       </div>
     
       <div class="time">
-       <h2 id="minutes"></h2>
+       <h2 id="minutes">00</h2>
        <small>Minutos</small>
       </div>
     
       <div class="time">
-       <h2 id="seconds"></h2>
+       <h2 id="seconds">00</h2>
        <small>Segundos</small>
       </div>
     
@@ -62,7 +62,7 @@
       <div id="form">
         <p>INSCREVA-SE AGORA</p>
       
-        <form >
+        <form>
           <div class="form-group">
             <label >Nome</label>
             <input type="text"  id="name"/>
@@ -76,31 +76,13 @@
             <input type="text" id="phone" />
           </div>
          
-          <button  onclick="registerUser()" class="btn" > ENVIAR</button>
+          <button onclick="registerUser()" class="btn" > ENVIAR</button>
         </form>
       </div>
     </header>
   </body>
 
   <script src="app.js"></script>
-  <script >  
-  async function postData(body){
-    alert(body)
-}
-
-   async function registerUser(){
-    const name = document.getElementById("name").value
-    const email = document.getElementById("email").value
-    const phone = document.getElementById("phone").value
-
-   const body = {
-    name,
-    email,
-    phone
-   }
-
-   const resp = await axios.post("http://localhost:3333/users", body)
-   console.log(resp.data)
-  }</script>
+  <script src="data.js">  </script>
 
 </html>
