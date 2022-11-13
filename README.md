@@ -2,7 +2,7 @@
 <h1>Cadastro de clientes</h1>
 
 <h4>Descrição</h4>
-<p>Um site para você cadastrar clientes.</p>
+<p>Um site para você cadastrar cliente</p>
 
 ![Cbank gif](https://user-images.githubusercontent.com/82523921/166157471-4d0557b2-1af5-45c1-9a20-a9a6f70d6656.gif)
 
@@ -26,7 +26,7 @@
   JAVASCRIPT
 </h3>
 
-<h2>Frond-End</h2>
+<h2>Back-End</h2>
 
 
 <h3>
